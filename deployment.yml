@@ -1,0 +1,44 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: anz-mortgage-bot-$$APP_PHASE
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mortgage-bot
+        phase: $$APP_PHASE
+    spec:
+      containers:
+      - name: mortgage-bot
+        #use image from dockerhub for local execution
+        image: manglu/mortgage-bot:0.8.1
+        # for local development against minikube registry
+        #imagePullPolicy: Never        
+        ports:
+        - containerPort: 3000
+        #Environment variables that are available to the container
+        #Secret Name is the binding-<Name-of-Bluemix-Service
+        #env:
+        #  - name: WCS_SERVICES
+        #    valueFrom:
+        #      secretKeyRef:
+        #        name: binding-wcs
+        #        key: binding
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: anz-mortgagebot-service
+  labels:
+    app: anz-mortgagebot-service
+spec:
+  type: NodePort
+  ports:
+    #the port that this service should serve on
+    - port: 3000
+    #label keys and values that must match in order to receive traffic for this service
+  selector:
+    app: mortgage-bot 
