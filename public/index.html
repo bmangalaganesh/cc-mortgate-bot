@@ -1,0 +1,102 @@
+<html>
+<head>
+  <base href="/">
+  <title>ANZ Mortgage Bot</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=11">
+  <link rel="shortcut icon" href="img/anz_small_logo.jpg" type="image/x-icon">
+</head>
+<body>
+  <nav id="navbar-top" class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li><a id="navbar-title-personal" class="navbar-top-text" href="#">Personal</a></li>
+        <li><a id="navbar-title-business" class="navbar-top-text" href="#">Business</a></li>
+        <li><a id="navbar-title-business" class="navbar-top-text" href="#">Corporate</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a id="navbar-title-search" class="navbar-top-text" href="#">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a id="navbar-title-language" class="navbar-top-text" href="#">
+            <img src="/img/aus_flag.svg" width="18" height="14" style="margin-right: 12px;">
+            English <i style="margin-left: 10px" class="fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a id="navbar-title-register" class="navbar-top-text" href="#">
+            Register for internet banking <i style="margin-left: 10px" class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="navbar-bottom" class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a id="navbar-bottom-logo-container" href="#">
+            <img id="navbar-bottom-logo" style="width:100%; max-width: 250px; height: auto"src="/img/anz-logo.png">
+          </a>
+        </li>
+        <li>
+          <div id="navbar-bottom-mortgages-title" class="container-fluid">
+            <div class="row">
+              Mortgages
+            </div>
+
+            <div class="row" style="font-size: 14px; padding-top: 5px;">
+              First-time buyer mortgages
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!--<ul class="nav navbar-nav navbar-right">
+        <li>
+          <a id="navbar-bottom-button" class="btn btn-default" href="#" role="button">
+            Log on <i style="margin-left: 10px" class="fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>-->
+
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10">
+        <p style="border-bottom: #B5B5B5 4px solid; padding-bottom: 15px; margin-bottom: 15px;">
+          <b>Welcome to the ANZ first-time buyer chatbot!</b>
+          <br>Chat to it to find out about mortgages and how much you can borrow.  You can restart your session at any time by typing <b>‘restart’</b>.
+          <br>No personally identifiable information will be captured and it won’t run any credit checks.
+          <br>We’d love to get your feedback on this new service - when it asks you how it’s doing, please let us know.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="chat-column">
+          <div id="scrollingChat"></div>
+          <label for="textInput" class="inputOutline">
+            <input id="textInput" class="input responsive-column"
+              placeholder="Type something" type="text">
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/app.bundle.js"></script>
+
+</body>
+</html>

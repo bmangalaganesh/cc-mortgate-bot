@@ -1,0 +1,45 @@
+{
+  "name": "NodejsStarterApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "s": "nodemon ./server/app.js",
+    "start": "node ./server/app.js",
+    "webpack": "webpack --config ./public/webpack.config.js --watch",
+    "tunnel": "( while true; do lt -p 3000 -s watsonchatdemo; done; )"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap-sass": "^3.3.7",
+    "botmaster": "^2.2.3",
+    "cfenv": "1.0.x",
+    "express": "4.14.x",
+    "font-awesome": "^4.7.0",
+    "localtunnel": "^1.8.1",
+    "lodash": "^4.17.2",
+    "nodemon": "^1.11.0",
+    "request-promise": "^4.1.1",
+    "watson-developer-cloud": "^2.9.0",
+    "xlsx": "^0.8.0"
+  },
+  "repository": {},
+  "engines": {
+    "node": "6.x"
+  },
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.13.0",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
