@@ -37,8 +37,8 @@ const botmasterSettings = {
 };
 
 const watsonConversationSettings = {
-  username: '87903249-7910-45f2-be6c-0780e310ed9c',
-  password: 'MCUgYiIizOyy',
+  username: 'edd54d3a-04aa-4cfa-8d6b-0ce499415550',
+  password: 'C7kzmJjoWRVu',
   version: 'v1',
   version_date: '2016-05-19',
 };
@@ -49,7 +49,7 @@ if (appEnv.isLocal) {
   watsonConversationWorkspace = 'a22ddcfd-cff6-4ca7-9fda-6f631fb9ea72';
   // watsonConversationWorkspace = 'b394df23-3f44-4511-bb31-99cf0b229222';
 } else {
-  watsonConversationWorkspace = 'a22ddcfd-cff6-4ca7-9fda-6f631fb9ea72';
+  watsonConversationWorkspace = 'c65f0eda-fd3a-4841-8e85-f809c847ee5c';
 }
 
 module.exports = {
