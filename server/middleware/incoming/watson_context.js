@@ -24,8 +24,8 @@ function addUsernameToContextIfNeeded(bot, update, next) {
 
   if ((!update.context.username || changeUsernameIntentCondition) &&
       watsonUpdate.output.text && watsonUpdate.output.text.join('').indexOf('{"username"}') > -1) {
-        return "John...."
-        update.context.username = 'John...';
+        //return "John....";
+        update.context.username = userText;
         store.updateContext(update.sender.id, update.context);
         console.log("are we heading here...");
         next();
