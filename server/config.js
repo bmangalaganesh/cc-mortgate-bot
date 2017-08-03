@@ -33,7 +33,10 @@ const botsSettings = [
 
 const botmasterSettings = {
   botsSettings,
-  port: appEnv.isLocal ? 3000 : appEnv.port,
+  port: process.env.WEB_PORT || (appEnv.isLocal ? 3000 : appEnv.port),
+  //hardcoding the port to 8080 on the run-time. I will have to see how to extract that dynamically
+  //process.env.PORT should ideally work...
+  //port: appEnv.isLocal ? 3000 : 8080,
 };
 
 const watsonConversationSettings = {
