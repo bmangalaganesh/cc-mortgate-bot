@@ -2,7 +2,7 @@
 
 const XLSX = require('xlsx');
 
-const workbook = XLSX.readFile('hsbc_mortgages.XLSX');
+const workbook = XLSX.readFile('./server/config/anz_mortgages.xlsx');
 
 const firstSheetName = workbook.SheetNames[0];
 const worksheet = workbook.Sheets[firstSheetName];
