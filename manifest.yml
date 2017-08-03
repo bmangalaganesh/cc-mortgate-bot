@@ -3,6 +3,6 @@ applications:
   memory: 512M
   instances: 1
   domain: au-syd.mybluemix.net
-  name: waitingforacreativename
-  host: waitingforacreativename
+  name: ${env-name}-waitingforacreativename
+  host: ${env-name}-waitingforacreativename
   disk_quota: 1024M
