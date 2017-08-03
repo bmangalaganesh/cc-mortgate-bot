@@ -46,7 +46,7 @@ const watsonConversationSettings = {
 let watsonConversationWorkspace;
 
 if (appEnv.isLocal) {
-  watsonConversationWorkspace = 'a22ddcfd-cff6-4ca7-9fda-6f631fb9ea72';
+  watsonConversationWorkspace = 'c65f0eda-fd3a-4841-8e85-f809c847ee5c';
   // watsonConversationWorkspace = 'b394df23-3f44-4511-bb31-99cf0b229222';
 } else {
   watsonConversationWorkspace = 'c65f0eda-fd3a-4841-8e85-f809c847ee5c';
