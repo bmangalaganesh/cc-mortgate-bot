@@ -49,7 +49,7 @@ if (appEnv.isLocal) {
   watsonConversationWorkspace = 'a22ddcfd-cff6-4ca7-9fda-6f631fb9ea72';
   // watsonConversationWorkspace = 'b394df23-3f44-4511-bb31-99cf0b229222';
 } else {
-  watsonConversationWorkspace = 'ac3c20d9-8564-4d99-ade3-060e4c7e99c3';
+  watsonConversationWorkspace = 'a22ddcfd-cff6-4ca7-9fda-6f631fb9ea72';
 }
 
 module.exports = {
