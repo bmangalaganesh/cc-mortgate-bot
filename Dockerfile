@@ -5,6 +5,8 @@ MAINTAINER Manglu Balasubramanian "bmangalaganesh@au1.ibm.com"
 ADD package.json /app/package.json
 ADD server /app/server
 ADD public /app/public
+ADD anz_mortgages.xlsx /app/anz_mortgages.xlsx
+
 RUN cd /app && npm install
 
 ENV WEB_PORT 80
@@ -26,6 +28,9 @@ RUN grep -q '^password.*required' /etc/pam.d/common-password && sed -i 's/^passw
 # Address a current vulnerability in public node image by removing offending package
 RUN dpkg --purge --force-all libgcrypt20 
 
+#Set the working directory to app
+WORKDIR /app
+
 # Define command to run the application when the container starts
-CMD ["node", "/app/server/app.js"] 
+CMD ["node", "server/app.js"] 
 
