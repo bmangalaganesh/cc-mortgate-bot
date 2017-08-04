@@ -26,19 +26,3 @@ spec:
         #      secretKeyRef:
         #        name: binding-wcs
         #        key: binding
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: anz-mortgagebot-service
-  labels:
-    app: anz-mortgagebot-service
-spec:
-  type: NodePort
-  ports:
-    #the port that this service should serve on
-    - port: 8080
-    #label keys and values that must match in order to receive traffic for this service
-  selector:
-    app: mortgage-bot 
