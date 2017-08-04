@@ -17,7 +17,7 @@ spec:
         # for local development against minikube registry
         #imagePullPolicy: Never        
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
         #Environment variables that are available to the container
         #Secret Name is the binding-<Name-of-Bluemix-Service
         #env:
@@ -38,7 +38,7 @@ spec:
   type: NodePort
   ports:
     #the port that this service should serve on
-    - port: 3000
+    - port: 8080
     #label keys and values that must match in order to receive traffic for this service
   selector:
     app: mortgage-bot 
